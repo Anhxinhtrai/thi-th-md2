@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $database = new DBConect();
     $conn = $database->connect();
     $id = $_REQUEST['id'];
-    $sql = "UPDATE product SET name = '$name', type = '$type', price = '$price',amount = '$amount',des = $des WHERE id= $id";
+    $sql = "UPDATE product SET name = '$name', type = '$type', price = '$price',amount = '$amount',des = '$des' WHERE id= $id";
     $conn->query($sql);
 
     header('location: ../index.php');
